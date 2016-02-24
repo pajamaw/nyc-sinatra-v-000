@@ -1,0 +1,22 @@
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+
+    <h2><%=@figure.name %></h2>
+
+<table>
+  <th>Associated Titles:<%@figure.titles.each do |title|%>
+    <td><%=title.name%></td>
+    <%end%>
+  </th>
+</table>
+<table>
+  <th>Associated Landmarks:<%@figure.landmarks.each do |landmark|%>
+    <td><%=landmark.name%></td>
+    <%end%>
+  </th>
+<table>
+
+   <a href="/figures/<%=@figure.id%>/edit">Edit Figure</a>
+   <br/>
+   <a href="/figures">Back to All Figures</a>

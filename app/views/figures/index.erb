@@ -1,0 +1,12 @@
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+
+<h1>Figures!</h1>
+  <%@figures.each do |figure|%>
+  <li><a href="/figures/<%=figure.id%>"><%=figure.name%></a></li>
+  <%end%>
+  <br/>
+ <a href="/figures/new">Create New Figure</a>
+ <br/>
+ <a href="/landmarks">Go to Landmarks</a>

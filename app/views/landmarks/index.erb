@@ -1,0 +1,14 @@
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+
+<h1>Landmarks!</h1>
+  <%@landmarks.each do |landmark|%>
+  <li><a href="/landmarks/<%=landmark.id%>"><%=landmark.name%></a></li>
+  <li>Year Completed: <%=landmark.year_completed%></li>
+  <%end%>
+     <br/>
+
+   <a href="/landmarks/new">Create New Landmark</a>
+   <br/>
+    <a href="/figures">Go to Figures</a>
